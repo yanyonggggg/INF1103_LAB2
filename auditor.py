@@ -4,6 +4,9 @@ failed_attempts = 0
 def check_if_int(value):
     try:
         int(value)
+        if int(value) < 0:
+            print("ERROR! Please enter a positive integer.")
+            return False
         return True
     except ValueError:
         return False
